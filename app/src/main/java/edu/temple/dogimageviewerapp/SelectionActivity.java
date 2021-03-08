@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 public class SelectionActivity extends AppCompatActivity {
 
-    //ImageView imageView;
+    ImageView imageView;
     //Spinner spinner;
     //int[] dogImagesArray;
 
@@ -32,6 +32,17 @@ public class SelectionActivity extends AppCompatActivity {
         gridView = (GridView)findViewById(R.id.gridView);
         gridView.setAdapter(new ImageAdapter(this));
 
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                    Intent launchIntent = new Intent(SelectionActivity.this, DisplayActivity.class);
+                    launchIntent.putExtra("id", position);
+                    //launchIntent.putExtra("image", gridView.getSelectedItem().);
+                    startActivity(launchIntent);
+
+        }
+        });
 
         /*spinner =findViewById(R.id.spinner);
         //imageView = findViewById(R.id.imageView);

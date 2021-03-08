@@ -11,7 +11,7 @@ import android.widget.ImageView;
 public class ImageAdapter extends BaseAdapter {
 
     private Context context;
-    private int[] imageArray = {android.R.color.transparent,R.drawable.blacklab, R.drawable.bulldog, R.drawable.bullmastiff, R.drawable.rottweiler};
+    public int[] imageArray = {android.R.color.transparent,R.drawable.blacklab, R.drawable.bulldog, R.drawable.bullmastiff, R.drawable.rottweiler};
 
     public ImageAdapter(Context context){
         this.context = context;
