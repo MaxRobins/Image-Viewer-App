@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -15,9 +16,12 @@ import java.util.ArrayList;
 
 public class SelectionActivity extends AppCompatActivity {
 
-    ImageView imageView;
-    Spinner spinner;
-    int[] dogImagesArray;
+    //ImageView imageView;
+    //Spinner spinner;
+    //int[] dogImagesArray;
+
+    GridView gridView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,8 +29,12 @@ public class SelectionActivity extends AppCompatActivity {
 
         getSupportActionBar().setTitle("Selection Activity");
 
-        spinner =findViewById(R.id.spinner);
-        imageView = findViewById(R.id.imageView);
+        gridView = (GridView)findViewById(R.id.gridView);
+        gridView.setAdapter(new ImageAdapter(this));
+
+
+        /*spinner =findViewById(R.id.spinner);
+        //imageView = findViewById(R.id.imageView);
 
 
         ArrayList breedArray = new ArrayList<String>();
@@ -78,5 +86,6 @@ public class SelectionActivity extends AppCompatActivity {
 
             private void showPicture(int position){
                 imageView.setImageResource(dogImagesArray[position]);
-            }
+            }*/
+    }
 }
