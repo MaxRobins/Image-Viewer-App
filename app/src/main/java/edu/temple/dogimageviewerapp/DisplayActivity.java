@@ -1,37 +1,52 @@
 package edu.temple.dogimageviewerapp;
 
 import android.content.Context;
+import android.content.Intent;
+import android.media.Image;
+import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
-public class DisplayActivity extends BaseAdapter {
-    Context context;
-    ArrayList<String> items;
-
-    public DisplayActivity(Context context, ArrayList items){
-        this.context = context;
-        this.items = items;
-    }
-    @Override
-    public int getCount() {
-        return items.size();
-    }
+public class DisplayActivity extends AppCompatActivity {
+    //Context context;
+    //ArrayList<String> items;
+    ImageView imageView;
+    //TextView textView;
 
     @Override
-    public Object getItem(int position) {
-        return null;
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_display);
+
+        imageView = (ImageView)findViewById(R.id.imageView3);
+
+        getSupportActionBar().hide();
+        getSupportActionBar().setTitle("Full Screen Image");
+
+        Intent i = getIntent();
+        int position = i.getExtras().getInt("id");
+        ImageAdapter imageAdapter = new ImageAdapter(this);
+
+        imageView.setImageResource(imageAdapter.imageArray[position]);
+
+
+        /*imageView = findViewById(R.id.imageView3);
+        textView = findViewById(R.id.textView3);
+        Bundle bundle = getIntent().getExtras();
+        if(bundle!=null){
+            int res_image = bundle.getInt("image");
+            imageView.setImageResource(res_image);
+            textView.setText(getIntent().getExtras().getString("name"));
+        }*/
+
     }
 
-    @Override
-    public long getItemId(int position) {
-        return 0;
-    }
-
-    @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        return null;
-    }
 }
