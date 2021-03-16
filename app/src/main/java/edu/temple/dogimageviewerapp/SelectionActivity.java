@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -17,6 +18,7 @@ import java.util.ArrayList;
 public class SelectionActivity extends AppCompatActivity {
 
     ImageView imageView;
+    TextView textView;
     //Spinner spinner;
     //int[] dogImagesArray;
 
@@ -28,6 +30,14 @@ public class SelectionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         getSupportActionBar().setTitle("Selection Activity");
+
+
+        //String string = getString(R.string.textview);
+        imageView = findViewById(R.id.imageView3);
+        //textView = findViewById(R.id.textView);
+
+
+
 
         gridView = (GridView)findViewById(R.id.gridView);
         gridView.setAdapter(new ImageAdapter(this));

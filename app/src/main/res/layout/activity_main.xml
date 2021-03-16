@@ -37,7 +37,7 @@
         android:layout_marginStart="173dp"
         android:layout_marginTop="46dp"
         android:layout_marginEnd="180dp"
-        android:text="Select an Image"
+        android:text="@string/textview"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -46,9 +46,11 @@
         android:id="@+id/gridView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="180dp"
         android:gravity="center"
         android:numColumns="3"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
