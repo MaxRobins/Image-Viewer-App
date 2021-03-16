@@ -19,7 +19,7 @@ public class DisplayActivity extends AppCompatActivity {
     //Context context;
     //ArrayList<String> items;
     ImageView imageView;
-    //TextView textView;
+    TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,9 +27,13 @@ public class DisplayActivity extends AppCompatActivity {
         setContentView(R.layout.activity_display);
 
         imageView = (ImageView)findViewById(R.id.imageView3);
+        //textView = findViewById(R.id.textView);//possibly textview3
 
-        getSupportActionBar().hide();
-        getSupportActionBar().setTitle("Full Screen Image");
+        //String string = getString(R.string.textview);
+
+
+        /*getSupportActionBar().hide();
+        getSupportActionBar().setTitle("Full Screen Image");*/
 
         Intent i = getIntent();
         int position = i.getExtras().getInt("id");

@@ -1,3 +1,4 @@
+
 package edu.temple.dogimageviewerapp;
 
 import android.content.Context;
