@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Application de visionneuse d\'images de chien</string>
+    <string name="textview">Clique pour voir</string>
+    <string name="textview3">chienchien</string>
+</resources>
